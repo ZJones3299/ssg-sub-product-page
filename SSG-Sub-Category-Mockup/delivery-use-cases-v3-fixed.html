@@ -1,0 +1,93 @@
+<section class="use-cases-section">
+  <h2 style="text-align: center; color: var(--deep-blue); font-size: 2.5rem; margin-bottom: 3rem;">
+    Who Benefits from Smart Parcel Lockers?
+  </h2>
+  <div class="use-cases-grid">
+    <div class="use-case-tile retail" data-index="0">
+      <h3>Retail & Office</h3>
+      <p>Touch-free deliveries, hybrid work storage, and efficient pickup solutions.</p>
+      <button>Learn More</button>
+    </div>
+    <div class="use-case-tile" data-index="1">
+      <h3>Housing & Universities</h3>
+      <p>24/7 access for residents and students with automated notifications.</p>
+      <button>Learn More</button>
+    </div>
+    <div class="use-case-tile" data-index="2">
+      <h3>Security & Tracking</h3>
+      <p>Real-time alerts, surveillance tie-ins, and detailed access logs.</p>
+      <button>Learn More</button>
+    </div>
+    <div class="use-case-tile" data-index="3">
+      <h3>Custom Locker Solutions</h3>
+      <p>Tailored indoor/outdoor lockers that match your space, brand, and systems.</p>
+      <button>Learn More</button>
+    </div>
+    <div class="use-case-tile" data-index="4">
+      <h3>Industry Applications</h3>
+      <p>Lockers for healthcare, hospitality, government, education, logistics, and more.</p>
+      <button>Learn More</button>
+    </div>
+    <div class="use-case-tile" data-index="5">
+      <h3>Future-Proofed Delivery</h3>
+      <p>Smart lockers built to scale with cloud control, app integration, and automation.</p>
+      <button>Learn More</button>
+    </div>
+  </div>
+</section>
+
+<div class="drawer" id="drawer">
+  <button class="close-btn" onclick="closeDrawer()">&times;</button>
+  <div class="drawer-image-placeholder" id="drawer-image"></div>
+  <div id="drawer-text"></div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const content = [
+      {
+        title: "The Role of Smart Lockers in Modern Delivery",
+        text: `<p>Smart parcel locker technology is becoming a go-to solution for major delivery carriers...</p>`
+      },
+      {
+        title: "The Rise of Smart Package Lockers in Retail and Office Environments",
+        text: `<p>Retail stores and commercial offices are increasingly adopting smart package lockers...</p>`
+      },
+      {
+        title: "Locker Technology for Housing and Universities",
+        text: `<p>Housing complexes and university campuses are ideal environments for smart parcel lockers...</p>`
+      },
+      {
+        title: "Smart Lockers That Fit Your Space and Systems",
+        text: `<p>Modern smart parcel lockers come in many different configurations...</p>`
+      },
+      {
+        title: "How Lockers Benefit Different Industries",
+        text: `<p>From healthcare to customer service, the flexibility of smart parcel lockers...</p>`
+      },
+      {
+        title: "The Future of Parcel Delivery",
+        text: `<p>As e-commerce continues to grow and consumer expectations evolve...</p>`
+      }
+    ];
+
+    const drawer = document.getElementById("drawer");
+    const drawerText = document.getElementById("drawer-text");
+    const drawerImage = document.getElementById("drawer-image");
+
+    document.querySelectorAll(".use-case-tile").forEach(tile => {
+      tile.addEventListener("click", () => {
+        const index = tile.getAttribute("data-index");
+        drawer.classList.add("open");
+        document.body.classList.add("drawer-open", "drawer-mode");
+        drawerText.innerHTML = `<h3>${content[index].title}</h3>${content[index].text}`;
+        drawerImage.innerHTML = ""; // Add image if desired
+      });
+    });
+  });
+
+  function closeDrawer() {
+    document.getElementById("drawer").classList.remove("open");
+    document.body.classList.remove("drawer-open", "drawer-mode");
+  }
+</script>

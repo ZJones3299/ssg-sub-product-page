@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Good Better Best</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .gbb-grid-wrap {
+      width: 100%;
+      padding: 6rem 1rem;
+      background: linear-gradient(to bottom, #f0f0f0 0%, var(--deep-blue) 55%);
+      color: var(--white);
+    }
+
+    .gbb-grid {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .gbb-card {
+      background-color: #6e6e6e;
+      color: #ffffff;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .gbb-card h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .gbb-image {
+      width: 100%;
+      height: 200px;
+      background: #ccc;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      box-shadow: inset 0 8px 20px rgba(0, 0, 0, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      color: #444;
+    }
+
+    .gbb-card p {
+      font-size: 1rem;
+      margin: 1rem 0 2rem;
+    }
+
+    .gbb-button-wrap {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .gbb-button {
+      background-color: #2795C0;
+      color: white;
+      font-weight: 600;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .gbb-button:hover {
+      background-color: #1c6d92;
+    }
+
+    .gbb-button.secondary {
+      background-color: #f15a24;
+      color: white;
+      font-weight: 600;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .gbb-button:hover.secondary{
+      background-color: #9b3a17;
+    }
+
+  </style>
+</head>
+<body>
+  <section class="gbb-grid-wrap">
+    <div class="gbb-grid">
+
+      <div class="gbb-card">
+        <h3>Good</h3>
+        <div class="gbb-image">Image Placeholder</div>
+        <p>Basic secure parcel locker units offering standard sizes and finishes with PIN code access.</p>
+        <div class="gbb-button-wrap">
+          <button class="gbb-button">Learn More</button>
+          <button class="gbb-button secondary">Get a Quote</button>
+        </div>
+      </div>
+
+      <div class="gbb-card">
+        <h3>Better</h3>
+        <div class="gbb-image">Image Placeholder</div>
+        <p>Smart lockers with customizable configurations, real-time notifications, and app-based access.</p>
+        <div class="gbb-button-wrap">
+          <button class="gbb-button">Learn More</button>
+          <button class="gbb-button secondary">Get a Quote</button>
+        </div>
+      </div>
+
+      <div class="gbb-card">
+        <h3>Best</h3>
+        <div class="gbb-image">Image Placeholder</div>
+        <p>Top-tier systems fully integrated with property tech, AI-based routing, and high-end security.</p>
+        <div class="gbb-button-wrap">
+          <button class="gbb-button">Learn More</button>
+          <button class="gbb-button secondary">Get a Quote</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</body>
+</html>

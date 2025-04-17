@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Overview Section</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      background-color: #f0f0f0;
+    }
+
+    .overview-section {
+      background-color: #f0f0f0;
+      padding: 3rem 3rem;
+      
+    }
+
+    .overview-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+      align-items: stretch; /* Make columns the same height */
+    }
+
+    .overview-text .text-box {
+      background-color: var(--white);
+      padding: 2rem;
+      border-radius: 16px;
+      border-left: 8px solid var(--secondary-blue);
+      border-radius: 12px;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+      height: 100%;
+    }
+
+    .overview-text h2 {
+      font-size: 2.5rem;
+      color: var(--deep-blue);
+      margin-bottom: 1rem;
+    }
+
+    .overview-text p {
+      font-size: 1.125rem;
+      color: var(--dark-grey);
+      margin-bottom: 1rem;
+    }
+
+    .overview-text ul {
+      margin-top: 1rem;
+      padding-left: 1.25rem;
+    }
+
+    .overview-text li {
+      font-size: 1.125rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .image-container {
+      background-color: #ddd;
+      width: 100%;
+      height: 100%;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #888;
+      font-weight: 600;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      .overview-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .overview-text .text-box,
+      .image-container {
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="overview-section">
+    <div class="overview-inner">
+      <div class="overview-grid">
+        <!-- LEFT: TEXT BLOCK -->
+        <div class="overview-text">
+          <div class="text-box">
+            <h2>What Are Parcel Lockers?</h2>
+            <p>Parcel lockers are a secure, automated solution for receiving and distributing packages in modern environments. They're built to eliminate missed deliveries, reduce theft, and offer 24/7 pickup convenience.</p>
+            <ul>
+              <li>Prevent missed deliveries</li>
+              <li>Minimize front desk workload</li>
+              <li>Enhance convenience and security</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- RIGHT: IMAGE BLOCK -->
+        <div class="overview-image">
+          <div class="image-container">Image Placeholder</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

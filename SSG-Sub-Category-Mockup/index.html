@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Full Page Preview</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #f0f0f0;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Modular Includes -->
+  <div data-include="hero.html"></div>
+  <div data-include="overview.html"></div>
+  <div data-include="how-it-works.html"></div>
+  <div data-include="delivery-use-cases-v3-fixed.html"></div>
+  <div data-include="good-better-best.html"></div>
+  <div data-include="testimonial-banner.html"></div>
+  <div data-include="faq.html"></div>
+  <div data-include="carousel-categories.html"></div>
+  <div data-include="closing-cta.html"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const includes = document.querySelectorAll('[data-include]');
+      let loaded = 0;
+      includes.forEach(async (section) => {
+        const file = section.getAttribute('data-include');
+        try {
+          const res = await fetch(file);
+          const html = await res.text();
+          section.innerHTML = html;
+        } catch (e) {
+          section.innerHTML = `<p style="color:red;">Error loading ${file}</p>`;
+        } finally {
+          loaded++;
+          if (loaded === includes.length) {
+            initDrawer();
+          }
+        }
+      });
+    });
+
+    function initDrawer() {
+      const drawer = document.getElementById("drawer");
+      const drawerText = document.getElementById("drawer-text");
+      const drawerImage = document.getElementById("drawer-image");
+      const closeBtn = document.querySelector(".close-btn");
+
+      const content = [
+        {
+          title: "The Role of Smart Lockers in Modern Delivery",
+          text: `<p>Smart parcel locker technology is becoming a go-to solution for major delivery carriers. USPS parcel lockers, for example, are helping the postal service manage growing volumes of mail and packages more efficiently. These lockers reduce delivery times, prevent missed drop-offs, and make package pickup safer and more convenient for customers.</p><p>By automating the drop-off and pickup process, smart lockers make life easier for both couriers and recipients. They keep packages safe until they're collected and reduce the need for redeliveries or front desk involvement. As a result, more logistics providers and businesses are adding this technology improve customer satisfaction.</p>`
+        },
+        {
+          title: "The Rise of Smart Package Lockers in Retail and Office Environments",
+          text: `<p>Retail stores and commercial offices are increasingly adopting smart package lockers to improve customer and employee experiences. In a retail setting, delivery lockers provide a seamless buy-online, pick-up-in-store (BOPIS) option. Shoppers can retrieve their items securely and conveniently without waiting in line.</p><p>In office buildings, smart locker systems serve multiple functions. They handle package delivery and support hybrid work, which means employees may not be in the office every day. Lockers benefit businesses by offering safe, touch-free delivery of important documents, IT equipment, and personal items.</p><p><strong>Advantages for retail and office environments:</strong></p><ul><li>Enhances BOPIS capabilities</li><li>Supports flexible work schedules</li><li>Reduces contact and manual handling</li></ul>`
+        },
+        {
+          title: "Locker Technology for Housing and Universities",
+          text: `<p>Housing complexes and university campuses are ideal environments for smart parcel lockers. With a high volume of daily deliveries, traditional mailrooms can quickly become overwhelmed. Smart locker solutions make parcel delivery easier. They remove the need for staff help, which allows residents or students to pick up packages when it suits them.</p><p>In these settings, lockers offer 24/7 secure access, helping reduce package theft and ensuring sensitive deliveries are protected.</p>`
+        },
+        {
+          title: "Security and Accountability",
+          text: `<p>One of the primary reasons businesses and property managers invest in smart lockers is security. These systems provide an auditable trail of every package delivery and pickup. Video surveillance, real-time tracking, and electronic notifications provide comfort to both senders and recipients.</p><ul><li>Video monitoring and surveillance</li><li>Delivery and pickup audit trails</li><li>Real-time access notifications</li></ul><p>Delivery lockers reduce the risk of package theft, a growing concern in both urban and suburban areas. Couriers can place valuable packages in a secure locker, and only the intended recipient can access this locker.</p>`
+        },
+        {
+          title: "How Lockers Benefit Different Industries",
+          text: `<p>From healthcare to customer service, the flexibility of smart parcel lockers makes them a fit for virtually every sector. Hospitals can use them to transfer medical records or prescriptions securely. Hotels can offer guests a place to pick up food deliveries or amenities.</p><p>Government facilities, libraries, and manufacturing plants are also turning to smart locker systems to enhance security and efficiency. Each industry has unique requirements, and we can customize locker solutions accordingly.</p>`
+        },
+        {
+          title: "The Future of Parcel Delivery",
+          text: `<p>As e-commerce continues to grow and consumer expectations evolve, smart parcel lockers are emerging as a critical component of the modern delivery infrastructure. With features like 24/7 secure access, smart tracking, and seamless integration, these systems are changing the way we think about package delivery.</p><p>Whether you're managing a residential property, running a business, or overseeing a university campus, investing in a smart locker system can lead to significant operational and security improvements.</p><p>In today's world of contactless payments and quick services, parcel lockers are more than just convenient — they are essential.</p>`
+        }
+      ];
+
+      document.querySelectorAll(".use-case-tile").forEach(tile => {
+        tile.addEventListener("click", () => {
+          const index = tile.getAttribute("data-index");
+          drawer.classList.add("open");
+          document.body.classList.add("drawer-open", "drawer-mode");
+          drawerText.innerHTML = `<h3>${content[index].title}</h3>${content[index].text}`;
+          drawerImage.innerHTML = ""; // Optional image logic
+        });
+      });
+
+      if (closeBtn) {
+        closeBtn.addEventListener("click", () => {
+          drawer.classList.remove("open");
+          document.body.classList.remove("drawer-open", "drawer-mode");
+        });
+      }
+    }
+  </script>
+</body>
+</html>

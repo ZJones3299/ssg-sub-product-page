@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero Section</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background-color: hsl(0, 0%, 94%);
+    }
+
+    .hero-section {
+      background: linear-gradient(135deg, #dbeeff, #f0f0f0);
+      padding: 6rem 0 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle at center, rgba(5, 78, 155, 0.2), transparent);
+      border-radius: 50%;
+      z-index: 0;
+    }
+
+    .hero-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-text {
+      flex: 0 0 60%;
+      text-align: left;
+    }
+
+    .hero-text h2 {
+      font-size: 3.25rem;
+      font-weight: 700;
+      color: var(--deep-blue);
+      margin-bottom: 1rem;
+      text-align: left;
+    }
+
+    .hero-text p {
+      font-size: 1.3rem;
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+      color: var(--dark-grey);
+    }
+
+    .hero-buttons {
+      flex: 0 0 35%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.75rem;
+    }
+
+    .hero-buttons a {
+      background: var(--secondary-blue);
+      color: var(--white);
+      padding: 0.75rem 2rem;
+      border-radius: 15px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      text-align: center;
+      min-width: 220px;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero-buttons a:hover {
+      background: #1f7aa6;
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 768px) {
+      .hero-inner {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+
+      .hero-text,
+      .hero-buttons {
+        flex: 1 1 100%;
+        align-items: center;
+      }
+
+      .hero-text h2,
+      .hero-text p {
+        text-align: center;
+      }
+
+      .hero-buttons a {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero-section">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h2>Smart Parcel Lockers</h2>
+        <p>Secure. Streamlined. Stylish. Discover the smarter way to manage package delivery with innovative storage solutions built for modern environments.</p>
+      </div>
+      <div class="hero-buttons">
+        <a href="#">Set Consultation</a>
+        <a href="#">Get Revit Files</a>
+        <a href="#">Read Testimonials</a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
