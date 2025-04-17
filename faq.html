@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ Accordion</title>
+  <style>
+    :root {
+      --deep-blue: #054E9B;
+      --dark-grey: #1a1a1a;
+      --accent-blue: #2795C0;
+      --light-grey: #444;
+      --white: #ffffff;
+      --off-white: #f0f0f0;
+      --max-width: 1280px;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .faq-section {
+  background: linear-gradient(to bottom, var(--deep-blue) 0%, var(--deep-blue) 65%, #f0f0f0 100%);
+  padding: 6rem 1rem;
+  color: var(--white);
+}
+
+    .faq-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .faq-title {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      font-weight: 700;
+        color: var(--white);
+    }
+
+    .accordion {
+      background-color: var(--white);
+      color: var(--deep-blue);
+      cursor: pointer;
+      padding: 1.25rem 2rem;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 1.125rem;
+      border-left: 8px solid var(--secondary-blue);
+      border-radius: 12px;
+      transition: background-color 0.3s ease;
+      margin-bottom: 1rem;
+      border-radius: 12px;
+      font-weight: 600;
+      position: relative;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .accordion::after {
+      content: '+';
+      color: var(--secondary-blue);
+      font-size: 1.25rem;
+      position: absolute;
+      right: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: transform 0.3s ease;
+    }
+
+    .accordion.active::after {
+      content: '\2212';
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    .accordion:hover {
+      background-color: var(--accent-blue);
+      color: var(--white)
+    }
+
+    .panel {
+  background-color: var(--white);
+  overflow: hidden;
+  max-height: 0;
+  transition: all 0.5s ease;
+  border-radius: 0 0 12px 12px;
+  margin-bottom: 1rem;
+
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  padding-top: 0;    /* hide top padding when closed */
+  padding-bottom: 0; /* hide bottom padding when closed */
+}
+
+.panel.open {
+  background-color: var(--white);  
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+    .panel p {
+      margin: 0;
+      color: var(--dark-grey);
+      font-size: 1.125rem;
+      line-height: 1.75;
+    }
+
+    @media (max-width: 768px) {
+      .faq-title {
+        font-size: 2rem;
+      }
+
+      .accordion,
+      .panel {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="faq-section">
+    <div class="faq-inner">
+      <h2 class="faq-title">Frequently Asked Questions</h2>
+
+      <button class="accordion">Where are parcel lockers located?</button>
+      <div class="panel">
+        <p>Parcel lockers can be installed in residential communities, offices, universities, and retail stores — wherever secure and accessible delivery is needed.</p>
+      </div>
+
+      <button class="accordion">How do parcel lockers work?</button>
+      <div class="panel">
+        <p>Couriers deposit packages in lockers and recipients receive a secure access code to retrieve them. Most systems support app-based, PIN, or QR code entry.</p>
+      </div>
+
+      <button class="accordion">Are parcel lockers available 24/7?</button>
+      <div class="panel">
+        <p>Yes! Most locker systems are accessible 24/7, giving recipients flexibility to retrieve packages on their schedule.</p>
+      </div>
+
+      <button class="accordion">Are parcel lockers secure?</button>
+      <div class="panel">
+        <p>Lockers are built with tamper-resistant materials and offer full tracking and audit logs to protect deliveries and provide accountability.</p>
+      </div>
+
+      <button class="accordion">Can parcel lockers be used for returns?</button>
+      <div class="panel">
+        <p>Many systems support returns by assigning temporary access or reverse logistics codes. It simplifies the return process and eliminates staff involvement.</p>
+      </div>
+
+    </div>
+  </section>
+</body>
+</html>

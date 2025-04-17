@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How It Works Banner</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    .how-it-works-section {
+      display: flex;
+      width: 100%;
+      min-height: 500px;
+      box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.15), 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .how-it-works-left {
+      flex: 1;
+      background-color: #1a1a1a;
+      color: white;
+      padding: 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .how-it-works-left h2 {
+      font-size: 2.75rem;
+      color: #2795C0;
+      margin-bottom: 1rem;
+    }
+
+    .how-it-works-left p {
+      font-size: 1.125rem;
+      line-height: 1.6;
+      color: #dddddd;
+      margin-bottom: 2rem;
+      max-width: 600px;
+    }
+
+    .cta-button {
+      background-color: #2795C0;
+      color: white;
+      padding: 0.75rem 2rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 6px;
+      width: fit-content;
+      transition: background 0.3s ease;
+      cursor: pointer;
+    }
+
+    .cta-button:hover {
+      background-color: #207aa1;
+    }
+
+    .how-it-works-right {
+      flex: 1;
+      background: #6e6e6e; /* dark grey background */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .image-placeholder {
+      width: 90%;
+      height: 300px;
+      background-color: #ccc;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .caption {
+      font-size: 0.95rem;
+      color: #f0f0f0;
+      max-width: 90%;
+    }
+
+    @media (max-width: 768px) {
+      .how-it-works-section {
+        flex-direction: column;
+      }
+
+      .how-it-works-left,
+      .how-it-works-right {
+        width: 100%;
+        padding: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="how-it-works-section">
+    <div class="how-it-works-right">
+      <div class="image-placeholder">Image Placeholder</div>
+      <p class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae justo eget.</p>
+    </div>
+    <div class="how-it-works-left">
+      <h2>How Smart Parcel Lockers Work</h2>
+      <p>
+        Smart parcel lockers go beyond basic storage. Equipped with digital technology, these lockers work by assigning a secure, temporary access code or using app-based notifications to inform recipients when a package is delivered. When a courier places the package into a locker, the system sends a notification to the recipient with a unique code or QR scan for retrieval. This smart locker system ensures parcels are accessed securely and conveniently, even after hours.
+      </p>
+      <button class="cta-button">Explore Smart Lockers</button>
+    </div>
+  </section>
+</body>
+</html>

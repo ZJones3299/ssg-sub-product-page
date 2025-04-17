@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Good Better Best Lockers</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --deep-blue: #054E9B;
+      --dark-grey: #333333;
+      --white: #ffffff;
+      --off-white: #f0f0f0;
+      --secondary-grey: #f5f5f5;
+      --secondary-blue: #2986cc;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: var(--off-white);
+      color: var(--dark-grey);
+    }
+
+    .section {
+      max-width: 100%;
+      padding: 6rem 0;
+      background: var(--deep-blue);
+    }
+
+    .section-inner {
+      width: 80%;
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: var(--white);
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .card-grid {
+      display: flex;
+      gap: 2rem;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      flex: 1 1 calc(33.333% - 1.5rem);
+      background: var(--white);
+      border-radius: 12px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-header {
+      background: var(--white);
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .card-header h3 {
+      margin: 0;
+      font-size: 1.25rem;
+      color: var(--deep-blue);
+    }
+
+    .card-image {
+      height: 200px;
+      background: #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      color: #888;
+    }
+
+    .card-body {
+      background: var(--white);
+      padding: 1rem 1.25rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-body ul {
+      padding-left: 1.25rem;
+      margin: 0 0 1.5rem;
+    }
+
+    .card-body li {
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .card-buttons {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: center;
+    }
+
+    .card-buttons a {
+      text-align: center;
+      padding: 0.75rem 1.25rem;
+      border-radius: 999px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      flex: 1;
+    }
+
+    .card-buttons .btn-primary {
+      background-color: var(--secondary-blue);
+      color: white;
+    }
+
+    .card-buttons .btn-primary:hover {
+      background-color: #1c6ab1;
+    }
+
+    .card-buttons .btn-secondary {
+      background-color: #e5e5e5;
+      color: #333;
+    }
+
+    .card-buttons .btn-secondary:hover {
+      background-color: #d2d2d2;
+    }
+
+    @media (max-width: 900px) {
+      .card {
+        flex: 1 1 100%;
+      }
+
+      .card-buttons {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="section">
+    <div class="section-inner">
+      <h2>Good, Better, Best: Smart Locker Options</h2>
+
+      <div class="card-grid">
+        <!-- GOOD -->
+        <div class="card">
+          <div class="card-header">
+            <h3>Package Parcel Locker</h3>
+          </div>
+          <div class="card-image">
+            Image Placeholder
+          </div>
+          <div class="card-body">
+            <ul>
+              <li>Manual locker system with 4-digit PIN access</li>
+              <li>PIN sent via text or email to recipient</li>
+              <li>Ideal for apartments, condos, and small offices</li>
+              <li>Cost-effective with no electronic components</li>
+            </ul>
+            <div class="card-buttons">
+              <a href="#" class="btn-primary">Explore Lockers</a>
+              <a href="#" class="btn-secondary">View Fetch Files</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- BETTER -->
+        <div class="card">
+          <div class="card-header">
+            <h3>Smart Parcel Locker</h3>
+          </div>
+          <div class="card-image">
+            Image Placeholder
+          </div>
+          <div class="card-body">
+            <ul>
+              <li>Electronic access via PIN, RFID, biometrics, or app</li>
+              <li>Centralized software for assignment + monitoring</li>
+              <li>Customizable design and integration options</li>
+              <li>Ideal for offices, schools, and public buildings</li>
+            </ul>
+            <div class="card-buttons">
+              <a href="#" class="btn-primary">View Smart Locker</a>
+              <a href="#" class="btn-secondary">View Fetch Files</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- BEST -->
+        <div class="card">
+          <div class="card-header">
+            <h3>Smart Rental Lockers</h3>
+          </div>
+          <div class="card-image">
+            Image Placeholder
+          </div>
+          <div class="card-body">
+            <ul>
+              <li>App-driven system with real-time notifications</li>
+              <li>Tamper-resistant and fully managed remotely</li>
+              <li>Supports hourly, daily, and subscription rentals</li>
+              <li>Best for high-demand, tech-forward spaces</li>
+            </ul>
+            <div class="card-buttons">
+              <a href="#" class="btn-primary">Shop Now</a>
+              <a href="#" class="btn-secondary">View Fetch Files</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</body>
+</html>
